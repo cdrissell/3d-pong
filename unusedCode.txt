@@ -1,0 +1,91 @@
+  /*
+  // Setup if program is in paddle mode OR face mode
+   if ((paddle_mode == true || face_mode == true) && mouse_mode == false) {
+   
+   multiplier = 1.0;
+   
+   float mult = width/height;
+   
+   float captureW = 320.0;
+   float captureH = captureW/mult;
+   
+   scaleX = width/captureW;
+   scaleY = height/captureH;
+   
+   cam = new Capture(this, int(captureW), int(captureH));
+   cam.start();
+   
+   opencv = new OpenCV(this, cam.width, cam.height);
+   
+   if (paddle_mode == true && face_mode == false) {
+   cornerPoints = new ArrayList<PVector>();
+   
+   paddlePos = new PVector();
+   
+   c1 = new PVector();
+   c2 = new PVector();
+   c3 = new PVector();
+   c4 = new PVector();
+   } else if (face_mode == true && paddle_mode == false) {
+   multiplier = 2.0;
+   opencv.loadCascade(OpenCV.CASCADE_FRONTALFACE);
+   }
+   }
+   // MOUSE MODE SETUP
+   else if (mouse_mode == true && face_mode == false && paddle_mode == false) {
+   multiplier = 1.0;
+   }
+   
+   */
+
+
+
+DRAWS REAL PADDLES ANGLES AND ALL
+
+
+      PVector topLeftCorner = cornerPoints.get(0);
+      PVector topCenter = cornerPoints.get(1);
+      PVector topRightCorner = cornerPoints.get(2);
+      PVector midLeft = cornerPoints.get(3);
+
+      PVector midRight = cornerPoints.get(5);
+      PVector botLeftCorner = cornerPoints.get(6);
+      PVector botCenter = cornerPoints.get(7);
+      PVector botRightCorner = cornerPoints.get(8);
+
+   /*
+     //sets paddle center
+       paddleX = center.x*scaleX;
+       paddleY = height-center.y*scaleY;
+       
+       c1.x = topLeftCorner.x*scaleX;
+       c1.y = height-topLeftCorner.y*scaleY;
+       c2.x = topRightCorner.x*scaleX;
+       c2.y = height-topRightCorner.y*scaleY;
+       c3.x = botLeftCorner.x*scaleX;
+       c3.y = height-botLeftCorner.y*scaleY;
+       c4.x = botRightCorner.x*scaleX;
+       c4.y = height-botRightCorner.y*scaleY;
+       
+       //draws paddle
+       noFill();
+       strokeWeight(6);
+       stroke(255, 0, 0);
+       
+       //red is correct rotation wrong position
+       line(paddleX, paddleY, c1.x, c1.y);
+       line(paddleX, paddleY, c2.x, c2.y);
+       line(paddleX, paddleY, c3.x, c3.y);
+       line(paddleX, paddleY, c4.x, c4.y);
+       line(c1.x, c1.y, c2.x, c2.y);
+       line(c2.x, c2.y, c4.x, c4.y);
+       line(c4.x, c4.y, c3.x, c3.y);
+       line(c3.x, c3.y, c1.x, c1.y);
+       
+       // blue is correct position wrong rotation
+       stroke(0, 0, 255);
+       quad(width-topLeftCorner.x*scaleX, topLeftCorner.y*scaleY, width-topRightCorner.x*scaleX, topRightCorner.y*scaleY, 
+       width-botRightCorner.x*scaleX, botRightCorner.y*scaleY, width-botLeftCorner.x*scaleX, botLeftCorner.y*scaleY);
+       line(width-topCenter.x*scaleX, topCenter.y*scaleY, width-botCenter.x*scaleX, botCenter.y*scaleY);
+       line(width-midLeft.x*scaleX, midLeft.y*scaleY, width-midRight.x*scaleX, midRight.y*scaleY);
+       */
